@@ -32,17 +32,19 @@
                         <ul class="nav">
                             <li class="active"><a href="<?php echo $this->url('home') ?>"><?php echo $this->translate('Home') ?></a></li>
                         </ul>
-                    </div><!--/.nav-collapse -->
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container wrapper">
             <?php echo $this->content; ?>
-            <hr>
-            <footer>
-                <p>&copy; 2005 - 2012 by Zend Technologies Ltd. <?php echo $this->translate('All rights reserved.') ?></p>
-            </footer>
-        </div> <!-- /container -->
+        </div>
+        <footer>
+            <div class="container fluid-row">
+                Welcome to my Social Network | Learn how to create a Social Network with ZF2 &copy; 2013
+            </div>
+        </footer>
+        
         <?php echo $this->inlineScript() ?>
     </body>
 </html>
