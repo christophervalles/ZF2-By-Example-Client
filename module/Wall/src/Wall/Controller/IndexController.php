@@ -18,15 +18,15 @@ class IndexController extends AbstractActionController
     public function indexAction()
     {
         $request = new Request();
-        $request->setUri('http://zf2-api/tbhot3ww');
+        $request->setUri('http://zf2-api/wall/tbhot3ww');
         $request->setMethod('GET');
         
         $client = new Client();
         $response = $client->dispatch($request);
         
         if ($response->isSuccess()) {
-            $user = \Zend\Json\Decoder::decode($response->getContent());
-            return array('user' => $user);
+            $response = \Zend\Json\Decoder::decode($response->getContent());
+            return (array)$response;
         }
         
         return array();
